@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 export default ({ pageContext: { data } }) => (
   <ul>
@@ -6,7 +7,9 @@ export default ({ pageContext: { data } }) => (
         <li
           key={item.uid}
         >
-          {item.slugs[0]}
+          <Link to={`/post/${item.slugs[0]}`}>
+            {item.slugs[0]}
+          </Link>
         </li>
       ))}
     </ul>
